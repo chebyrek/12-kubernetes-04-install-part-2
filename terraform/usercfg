@@ -1,0 +1,7 @@
+users:
+  - name: ubuntu
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDA3L7GYZCLiaIqTxTurWayScpU8eXS/PAeKhhy19d9RLYGm72RmP/bkppZyvGf0X1TgNn62QgTsZTrT+R7DJTLThkbu3jOfG7YXmFMHly8leJ/a3cLKODT8ouw0RGnFU+bdXLbJDTNzVzIecRV7YlcXqOcJyspLkErTmN0aQr9b7Ll/FmbnYhoNXNhRyioucwQGUjCZstXjCaTGNPWbUvHrB/62GtGKwmeLER1UlFWQs1qc+TP2oO12DErs0YnF1/FvdCLjgdS14gOC6AFiaFYbgUepfuNVBPMQBiY25yszgNQ7ER+2nfs88sMuOq7sITnVLIeNVMYtydWZ2hpEFbQ7rDLAxFAOZNE2vj8MoXW5xo/GkAivu2U+mGHwx2WmytoEwrxT2dLLKzydRqL6xJ+f369FHLqSysQzBmK9q0t80TlogZXwfyQjQFHDvqWRHklI7D+SyR9tP0qBK3ewQovai+dYE4YSASnaJXIPtHf+vdxSuPzItJF6jxrpPPYk4s= chebyrekk@mail.ru
