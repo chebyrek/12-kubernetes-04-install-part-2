@@ -14,6 +14,9 @@
 
 ---
 Все разворачивается в Yandex Cloud, файлы Terraform есть в репозитории
+Файлы, которые я изменял в kubespray
+- [inventory.ini](/kubespray/inventory/mycluster/inventory.ini)
+- [all.yml](/kubespray/inventory/mycluster/group_vars/all/all.yml) - параметр `loadbalancer_apiserver`
 
 ```
 $ kubectl get nodes -o wide
