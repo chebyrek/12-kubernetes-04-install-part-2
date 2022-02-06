@@ -101,6 +101,29 @@ resource "yandex_compute_instance" "node" {
     preemptible = true
   }
 
+  # чтобы не перетирался hostname меняем конфиг cloud-init
+
+  connection {
+    type        = "ssh"
+    user        = "ubuntu"
+    host        = self.network_interface.0.nat_ip_address
+    private_key = file("/home/user/.ssh/id_rsa")
+
+  }
+
+  provisioner "remote-exec" {
+    inline = ["sudo chown -R ubuntu: /etc/cloud/"]
+  }
+
+  provisioner "file" {
+    source      = "cloud.cfg"
+    destination = "/etc/cloud/cloud.cfg"
+  }
+
+  provisioner "remote-exec" {
+    inline = ["sudo chown -R root: /etc/cloud/"]
+  }
+
   metadata = {
     ssh-keys = "ubuntu:${file("id_rsa.pub")}"
   }
